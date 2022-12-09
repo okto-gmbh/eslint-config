@@ -1,0 +1,45 @@
+{
+  "name": "@authentiqagency/eslint-config",
+  "version": "0.0.6",
+  "description": "Shared eslint-config",
+  "main": "index.jsonc",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/authentiqagency/eslint-config.git"
+  },
+  "author": "Roger Schönbächler",
+  "bugs": {
+    "url": "https://github.com/authentiqagency/eslint-config/issues"
+  },
+  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
+  "files": [
+    "index.jsonc"
+  ],
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": ">=8.27.0",
+    "eslint-config-next": "^13.0.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsonc": "^2.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-sonarjs": "^0.16.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "eslint-plugin-typescript-sort-keys": "^2.1.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-plugin-yml": "^1.2.0",
+    "prettier-plugin-sort-json": "^0.0.3"
+  }
+}
