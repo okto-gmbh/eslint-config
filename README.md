@@ -1,14 +1,11 @@
-# shared-configs
+# eslint-config
 
-Shared configurations for
-
-* eslint
-* prettier
+Shared eslint config.
 
 ## Installation
 
 ```sh
-pnpm i --save-dev @authentiqagency/shared-configs
+pnpm i --save-dev @authentiqagency/eslint-config
 ```
 
 ## Usage
@@ -16,11 +13,10 @@ pnpm i --save-dev @authentiqagency/shared-configs
 ```jsonc
 // .eslintrc.json
 {
-  "extends": "@authentiqagency/shared-configs/eslint",
+  "extends": "@authentiqagency/eslint-config/eslint",
 }
-
 // .prettierrc
-"@authentiqagency/shared-configs/prettier"
+"@authentiqagency/eslint-config/prettier"
 ```
 
 ## VSCode integration

@@ -1,20 +1,20 @@
 {
-  "name": "@authentiqagency/shared-configs",
+  "name": "@authentiqagency/eslint-config",
   "version": "0.1.3",
-  "description": "Shared configuration files",
+  "description": "ESLint and prettier config",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/authentiqagency/shared-configs.git"
+    "url": "git+https://github.com/authentiqagency/eslint-config.git"
   },
   "author": "Roger Schönbächler",
   "bugs": {
-    "url": "https://github.com/authentiqagency/shared-configs/issues"
+    "url": "https://github.com/authentiqagency/eslint-config/issues"
   },
-  "homepage": "https://github.com/authentiqagency/shared-configs#readme",
+  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
   "files": [
     "eslint",
     "prettier"
