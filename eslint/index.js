@@ -1,4 +1,4 @@
-export const eslint = {
+export default {
   "env": {
     "browser": true,
     "es6": true,

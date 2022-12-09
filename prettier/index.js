@@ -1,4 +1,4 @@
-export const prettier = {
+export default {
     "trailingComma": "none",
     "semi": false,
     "singleQuote": true,

@@ -19,11 +19,11 @@
     "index.jsonc"
   ],
   "exports": {
-    "eslint": {
+    "./eslint": {
       "import": "./eslint/index.js",
       "require": "./eslint/index.js"
     },
-    "prettier": {
+    "./prettier": {
       "import": "./prettier/index.js",
       "require": "./prettier/index.js"
     }
