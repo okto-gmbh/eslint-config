@@ -33,16 +33,42 @@ module.exports = {
   "plugins": [
     "@typescript-eslint",
     "unused-imports",
+    "import",
     "typescript-sort-keys",
     "sort-keys-fix",
-    "eslint-plugin-jsonc",
-    "eslint-plugin-yml",
-    "eslint-plugin-import",
-    "eslint-plugin-tsdoc",
+    "jsonc",
+    "yml",
+    "tsdoc",
     "prettier",
   ],
   "rules": {
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    
+    // Imports
+    "unused-imports/no-unused-imports": "warn",
+    "import/first": "warn",
+    "import/newline-after-import": ["warn", { "count": 2 }],
+    "import/no-duplicates": "error",
+    "import/no-relative-packages": "warn", "import/order": [
+      "warn", {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+
   },
   "overrides": [
   
