@@ -39,13 +39,33 @@ module.exports = {
     "eslint-plugin-yml",
     "eslint-plugin-import",
     "eslint-plugin-tsdoc",
-    "markdown",
-    "prettier"
+    "prettier",
   ],
   "rules": {
     "prettier/prettier": "warn"
   },
   "overrides": [
-    
+  
+
+    // -- JSON
+
+    {
+      "excludedFiles": ["package-lock.json", "yarn.lock"],
+      "files": ["*.json", "*.json5", "*.jsonc"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "jsonc/sort-keys": [
+          "warn",
+          "asc",
+          {
+            "caseSensitive": false,
+            "minKeys": 2,
+            "natural": true
+          }
+        ]
+      }
+    },
+
+
   ]
 }
