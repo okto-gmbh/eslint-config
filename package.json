@@ -1,7 +1,7 @@
 {
   "name": "@authentiqagency/shared-configs",
   "version": "0.1.2",
-  "description": "Shared shared-configs",
+  "description": "Shared configuration files",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
