@@ -88,7 +88,7 @@ module.exports = {
     // TypeScript
 
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts", "*.tsx", ".mts", ".mtsx", ".cts", ".ctsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 2020,
@@ -118,8 +118,14 @@ module.exports = {
     {
       "files": [
         "**/*.config.ts",
+        "**/*.config.mts",
+        "**/*.config.cts",
         "**/*.md/*.ts",
-        "**/*.md/*.tsx"
+        "**/*.md/*.tsx",
+        "**/*.md/*.mts",
+        "**/*.md/*.mtsx",
+        "**/*.md/*.cts",
+        "**/*.md/*.ctsx"
       ],
       "parserOptions": {
         "createDefaultProgram": true
