@@ -1,6 +1,6 @@
 {
   "name": "@authentiqagency/eslint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Shared eslint-config",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
