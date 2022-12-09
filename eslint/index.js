@@ -47,13 +47,14 @@ module.exports = {
   "overrides": [
   
 
-    // -- JSON
+    // JSON
 
     {
       "excludedFiles": ["package-lock.json", "yarn.lock"],
       "files": ["*.json", "*.json5", "*.jsonc"],
       "parser": "jsonc-eslint-parser",
       "rules": {
+        "jsonc/comma-dangle": ["error", "never"], // Trailing comma is invalid in JSON
         "jsonc/sort-keys": [
           "warn",
           "asc",
@@ -66,6 +67,147 @@ module.exports = {
       }
     },
 
+
+    // Package json
+
+    {
+      "files": ["package.json"],
+      "rules": {
+        "jsonc/sort-keys": [
+          "warn",
+          {
+            "order": {
+              "caseSensitive": true,
+              "natural": true,
+              "type": "asc"
+            },
+            "pathPattern": "^.*..*$"
+          },
+          {
+            "order": [
+              "version",
+              "type",
+              "name",
+              "displayName",
+              "description",
+              "license",
+              "author",
+              "funding",
+              "private",
+              "homepage",
+              "repository",
+              "bugs",
+              "sideEffects",
+              "exports",
+              "main",
+              "bin",
+              "module",
+              "unpkg",
+              "jsdelivr",
+              "types",
+              "scripts",
+              "engines",
+              "files",
+              "peerDependencies",
+              "peerDependenciesMeta",
+              "dependencies",
+              "optionalDependencies",
+              "overrides",
+              "devDependencies",
+              "keywords",
+              "volta"
+            ],
+            "pathPattern": "^$"
+          },
+          {
+            "order": [
+              "types",
+              "require",
+              "import"
+            ],
+            "pathPattern": "^exports.*$"
+          }
+        ]
+      }
+    },
+
+
+    // TSConfig json
+
+    {
+      "files": ["tsconfig.json", "tsconfig.*.json"],
+      "rules": {
+        "jsonc/sort-keys": [
+          "warn",
+          {
+            "order": {
+              "caseSensitive": true,
+              "natural": true,
+              "type": "asc"
+            },
+            "pathPattern": "^.*..*$"
+          },
+          {
+            "order": [
+              "extends",
+              "compilerOptions",
+              "include",
+              "exclude"
+            ],
+            "pathPattern": "^$"
+          }
+        ]
+      }
+    },
+
+
+    // eslintrc json
+
+    {
+      "files": [".eslintrc.json", "eslintrc.json"],
+      "rules": {
+        "jsonc/sort-keys": [
+          "warn",
+          {
+            "order": {
+              "caseSensitive": true,
+              "natural": true,
+              "type": "asc"
+            },
+            "pathPattern": "^.*..*$"
+          },
+          {
+            "order": [
+              "extends",
+              "plugins",
+              "overrides",
+              "rules"
+            ],
+            "pathPattern": "^$"
+          }
+        ]
+      }
+    },
+
+
+    // YAML
+
+    {
+      "files": ["*.yaml", "*.yml"],
+      "parser": "yaml-eslint-parser",
+      "rules": {
+        "yml/quotes": ["warn", { "avoidEscape": true, "prefer": "double" }],
+        "yml/sort-keys": [
+          "warn",
+          "asc",
+          {
+            "caseSensitive": false,
+            "minKeys": 2,
+            "natural": true
+          }
+        ]
+      }
+    },
 
   ]
 }
