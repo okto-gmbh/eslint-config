@@ -1,20 +1,20 @@
 {
-  "name": "@authentiqagency/eslint-config",
+  "name": "@authentiqagency/shared-configs",
   "version": "0.1.0",
-  "description": "Shared eslint-config",
+  "description": "Shared shared-configs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/authentiqagency/eslint-config.git"
+    "url": "git+https://github.com/authentiqagency/shared-configs.git"
   },
   "author": "Roger Schönbächler",
   "bugs": {
-    "url": "https://github.com/authentiqagency/eslint-config/issues"
+    "url": "https://github.com/authentiqagency/shared-configs/issues"
   },
-  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
+  "homepage": "https://github.com/authentiqagency/shared-configs#readme",
   "files": [
     "eslint",
     "prettier"
@@ -33,8 +33,8 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.29.0",
-    "eslint-config-next": "^13.0.6",
-    "eslint-config-prettier": "^8.5.0",
+    "shared-configs-next": "^13.0.6",
+    "shared-configs-prettier": "^8.5.0",
     "eslint-plugin-autofix": "^1.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.5.0",
