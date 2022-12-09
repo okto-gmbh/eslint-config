@@ -37,6 +37,7 @@ module.exports = {
     "typescript-sort-keys",
     "sort-keys-fix",
     "jsonc",
+    "markdown",
     "yml",
     "tsdoc",
     "prettier",
@@ -110,7 +111,21 @@ module.exports = {
         "typescript-sort-keys/string-enum": "warn"
       }
     },
+
   
+    // Standalone TypeScript
+
+    {
+      "files": [
+        "**/*.config.ts",
+        "**/*.md/*.ts",
+        "**/*.md/*.tsx"
+      ],
+      "parserOptions": {
+        "createDefaultProgram": true
+      }
+    },
+
 
     // JSON
 
@@ -274,6 +289,15 @@ module.exports = {
         ]
       }
     },
+
+
+    // Markdown
+
+    {
+      "files": ["**/*.md"],
+      "processor": "markdown/markdown"
+    }
+
 
   ]
 }
