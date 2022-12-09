@@ -42,9 +42,15 @@ module.exports = {
     "prettier",
   ],
   "rules": {
+
+
+    // Prettier
+
     "prettier/prettier": "warn",
-    
+
+
     // Imports
+
     "unused-imports/no-unused-imports": "warn",
     "import/first": "warn",
     "import/no-duplicates": "error",
@@ -67,6 +73,12 @@ module.exports = {
         "newlines-between": "always"
       }
     ],
+
+
+    // Sort object keys
+
+    "sort-keys": ["warn", "asc", { "allowLineSeparatedGroups": true, "natural": true }],
+    "sort-keys-fix/sort-keys-fix": "warn",
 
   },
   "overrides": [
