@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/authentiqagency/eslint-config#readme",
   "files": [
-    "index.jsonc"
+    "eslint",
+    "prettier"
   ],
   "exports": {
     "./eslint": {
