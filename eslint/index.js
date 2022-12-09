@@ -193,6 +193,7 @@ module.exports = {
     // YAML
 
     {
+      "excludedFiles": ["pnpm-lock.yaml"],
       "files": ["*.yaml", "*.yml"],
       "parser": "yaml-eslint-parser",
       "rules": {
