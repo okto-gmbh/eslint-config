@@ -47,7 +47,6 @@ module.exports = {
     // Imports
     "unused-imports/no-unused-imports": "warn",
     "import/first": "warn",
-    "import/newline-after-import": ["warn", { "count": 2 }],
     "import/no-duplicates": "error",
     "import/no-relative-packages": "warn", "import/order": [
       "warn", {
