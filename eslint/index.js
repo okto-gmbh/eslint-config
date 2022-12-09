@@ -1,4 +1,4 @@
-{
+export const eslint = {
   "env": {
     "browser": true,
     "es6": true,
@@ -39,9 +39,11 @@
     "eslint-plugin-yml",
     "eslint-plugin-import",
     "eslint-plugin-tsdoc",
-    "markdown"
+    "markdown",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "warn"
   },
   "overrides": [
     
