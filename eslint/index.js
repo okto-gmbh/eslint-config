@@ -201,7 +201,14 @@ module.exports = {
               "overrides",
               "devDependencies",
               "keywords",
-              "volta"
+              "volta",
+              {
+                "order": {
+                  "caseSensitive": true,
+                  "natural": true,
+                  "type": "asc",
+                }
+              },
             ],
             "pathPattern": "^$"
           },
