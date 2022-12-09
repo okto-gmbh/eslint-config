@@ -82,6 +82,34 @@ module.exports = {
 
   },
   "overrides": [
+
+
+    // TypeScript
+
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "project": ["tsconfig.json"]
+      },
+      "rules": {
+
+
+        // Sort type keys
+
+        "typescript-sort-keys/interface": [
+          "warn",
+          "asc",
+          {
+            "caseSensitive": true,
+            "natural": true,
+            "requiredFirst": true
+          }
+        ],
+        "typescript-sort-keys/string-enum": "warn"
+      }
+    },
   
 
     // JSON
