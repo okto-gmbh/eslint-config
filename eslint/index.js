@@ -312,7 +312,6 @@ module.exports = {
         "**/*.md/*.cjsx"
       ],
       "rules": {
-        "import/newline-after-import": ["warn", { "count": 1 }],
         "unused-imports/no-unused-imports": "off"
       }
     }
