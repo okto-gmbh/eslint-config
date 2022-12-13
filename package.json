@@ -1,6 +1,6 @@
 {
   "name": "@authentiqagency/eslint-config",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "ESLint and prettier config",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
