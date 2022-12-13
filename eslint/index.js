@@ -55,7 +55,6 @@ module.exports = {
 
     "unused-imports/no-unused-imports": "warn",
     "import/first": "warn",
-    "import/newline-after-import": ["warn", { "count": 2 }],
     "import/order": "off",
     "import/no-duplicates": "error",
     "simple-import-sort/exports": "warn",
