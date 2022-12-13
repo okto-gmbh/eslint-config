@@ -73,8 +73,8 @@ module.exports = {
           // External packages.
           ["^"],
           // Internal packages.
-          ["^(@)(/.*|$)"],
-          ["^(~)(/.*|$)"],
+          ["^(@)(.*|$)"],
+          ["^(~)(.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
           // Parent imports. Put `..` last.
@@ -83,11 +83,14 @@ module.exports = {
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
           // Style imports.
           ["^.+\\.s?css$"],
+          // Styled components.
+          ["^.+\\.styled\\.(j|t)sx?$", "^.+\\.styled$"],
           // JSON imports.
           ["^.+\\.jsonc?$"]
         ]
       }
     ],
+
 
     // Sort object keys
 
