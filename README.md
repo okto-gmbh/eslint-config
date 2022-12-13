@@ -8,6 +8,12 @@ Shared eslint config.
 pnpm i --save-dev @authentiqagency/eslint-config
 ```
 
+It is also recommended to let pnpm auto install peer dependencies:
+
+```sh
+pnpm config set auto-install-peers true
+```
+
 ## Usage
 
 ```jsonc
@@ -30,9 +36,6 @@ To recommend the extension in your repository create a `.vscode/extensions.json`
 {
   "recommendations": [
     "dbaeumer.vscode-eslint"
-  ],
-  "unwantedRecommendations": [
-    "esbenp.prettier-vscode"
   ]
 }
 ```
@@ -71,7 +74,7 @@ If you want to have linting scripts, you can use something like this in the `pac
 ```jsonc
 {
   "scripts": {
-    "lint": "node_modules/.bin/eslint --ext .ts,.tsx,.js,.jsx,.json,.jsonc,.yml ./",
+    "lint": "node_modules/.bin/eslint --ext .ts,.tsx,.js,.jsx,.json,.jsonc,.yml,.md ./",
     "lint:ci": "pnpm run lint -- --max-warnings 0",
     "lint:fix": "pnpm run lint -- --fix"
   }
