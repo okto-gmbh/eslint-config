@@ -34,6 +34,7 @@ module.exports = {
     "@typescript-eslint",
     "unused-imports",
     "import",
+    "simple-import-sort",
     "typescript-sort-keys",
     "sort-keys-fix",
     "jsonc",
@@ -54,26 +55,12 @@ module.exports = {
 
     "unused-imports/no-unused-imports": "warn",
     "import/first": "warn",
+    "import/newline-after-import": ["warn", { "count": 2 }],
+    "import/order": "off",
     "import/no-duplicates": "error",
-    "import/no-relative-packages": "warn", "import/order": [
-      "warn", {
-        "alphabetize": {
-          "caseInsensitive": true,
-          "order": "asc"
-        },
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "object",
-          "type"
-        ],
-        "newlines-between": "always"
-      }
-    ],
+    "simple-import-sort/exports": "warn",
+    "sort-imports": "off",
+    "simple-import-sort/imports": "warn",
 
 
     // Sort object keys
@@ -309,6 +296,26 @@ module.exports = {
     {
       "files": ["**/*.md"],
       "processor": "markdown/markdown"
+    },
+    {
+      "files": [
+        "**/*.md/*.ts",
+        "**/*.md/*.tsx",
+        "**/*.md/*.mts",
+        "**/*.md/*.mtsx",
+        "**/*.md/*.cts",
+        "**/*.md/*.ctsx",
+        "**/*.md/*.js",
+        "**/*.md/*.jsx",
+        "**/*.md/*.mjs",
+        "**/*.md/*.mjsx",
+        "**/*.md/*.cjs",
+        "**/*.md/*.cjsx"
+      ],
+      "rules": {
+        "import/newline-after-import": ["warn", { "count": 1 }],
+        "unused-imports/no-unused-imports": "off"
+      }
     }
 
 
