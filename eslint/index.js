@@ -33,6 +33,7 @@ module.exports = {
   "plugins": [
     "@typescript-eslint",
     "unused-imports",
+    "no-secrets",
     "import",
     "simple-import-sort",
     "typescript-sort-keys",
