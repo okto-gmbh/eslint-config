@@ -48,7 +48,7 @@ module.exports = {
 
     // Prettier
 
-    "prettier/prettier": "warn",
+    "prettier/prettier": ["warn", { "usePrettierrc": true }],
 
 
     // Imports
@@ -348,5 +348,28 @@ module.exports = {
     }
 
 
-  ]
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight"],
+            "aspects": ["invalidHref", "preferButton"]
+        }
+    ],
+    "react/prop-types": "off",
+    "no-secrets/no-secrets": "warn",
+    "no-unused-vars": [
+        "warn",
+        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "unused-imports/no-unused-vars": [
+        "warn",
+        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "sonarjs/no-nested-template-literals": "off",
+    "@next/next/no-document-import-in-page": "off"
+  }
 }
