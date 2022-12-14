@@ -17,9 +17,16 @@ pnpm config set auto-install-peers true
 ## Usage
 
 ```jsonc
-// .eslintrc.json
+// .eslintrc
 {
   "extends": "@authentiqagency/eslint-config/eslint"
+}
+```
+
+```jsonc
+// .stylelintrc
+{
+    "extends": "@authentiqagency/eslint-config/stylelint"
 }
 ```
 
@@ -38,7 +45,8 @@ To recommend the extension in your repository create a `.vscode/extensions.json`
 ```jsonc
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint"
   ]
 }
 ```
@@ -47,28 +55,61 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
 
 ```jsonc
 {
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json5]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": false
-  },
-  "editor.formatOnSave": false,
-  "eslint.validate": ["javascript", "typescript", "json", "jsonc", "json5", "yaml"],
-  "prettier.enable": false
+
+
+    // ESLint
+
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json5]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
+        "source.organizeImports": false
+    },
+
+
+    // VSCode
+
+    "editor.formatOnSave": false,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "json",
+        "jsonc",
+        "json5",
+        "yaml"
+    ],
+
+
+    // Prettier
+
+    "prettier.enable": false,
+
+
+    // Stylelint
+
+    "stylelint.enable": true,
+    "stylelint.validate": [
+        "css",
+        "less",
+        "scss",
+        "postcss",
+        "javascript",
+        "typescript"
+    ]
 }
 ```
 
