@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.11.15
   '@typescript-eslint/eslint-plugin': ^5.43.0
   '@typescript-eslint/parser': ^5.43.0
   eslint: ^8.29.0
   eslint-config-next: ^13.0.6
   eslint-config-prettier: ^8.5.0
-  eslint-plugin-autofix: ^1.1.0
   eslint-plugin-import: npm:eslint-plugin-i@^2.26.0-2
   eslint-plugin-jsonc: ^2.5.0
   eslint-plugin-jsx-a11y: ^6.6.1
@@ -26,12 +26,12 @@ specifiers:
   prettier: ^2.8.1
 
 dependencies:
+  '@types/node': 18.11.15
   '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
   '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
   eslint: 8.29.0
   eslint-config-next: 13.0.6_ha6vam6werchizxrnqvarmz2zu
   eslint-config-prettier: 8.5.0_eslint@8.29.0
-  eslint-plugin-autofix: 1.1.0_eslint@8.29.0
   eslint-plugin-import: /eslint-plugin-i/2.26.0-2_z7hwuz3w5sq2sbhy7d4iqrnsvq
   eslint-plugin-jsonc: 2.5.0_eslint@8.29.0
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.29.0
@@ -172,6 +172,10 @@ packages:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: false
+
+  /@types/node/18.11.15:
+    resolution: {integrity: sha512-VkhBbVo2+2oozlkdHXLrb3zjsRkpdnaU2bXmX8Wgle3PUi569eLRaHGlgETQHR7lLL1w7GiG3h9SnePhxNDecw==}
     dev: false
 
   /@types/semver/7.3.13:
@@ -797,20 +801,6 @@ packages:
       eslint-import-resolver-typescript: 3.5.2_lt3hqehuojhfcbzgzqfngbtmrq
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /eslint-plugin-autofix/1.1.0_eslint@8.29.0:
-    resolution: {integrity: sha512-aKQ7s6CTeJRJgnhSlsGI7kQhnNCa1q3UYBM+9PTEgvdC5b+GjV/SZA233VNqkoBldb7/BkeWBRjorUjxeUfrxA==}
-    engines: {node: '>=8'}
-    peerDependencies:
-      eslint: '>= 5.12.1'
-    dependencies:
-      eslint: 8.29.0
-      eslint-rule-composer: 0.3.0
-      espree: 9.4.1
-      esutils: 2.0.3
-      lodash: 4.17.21
-      string-similarity: 4.0.4
     dev: false
 
   /eslint-plugin-i/2.26.0-2_z7hwuz3w5sq2sbhy7d4iqrnsvq:
@@ -2140,10 +2130,6 @@ packages:
   /slash/4.0.0:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
-    dev: false
-
-  /string-similarity/4.0.4:
-    resolution: {integrity: sha512-/q/8Q4Bl4ZKAPjj8WerIBJWALKkaPRfrvhfF8k/B23i4nzrlRj2/go1m90In7nG/3XDSbOo0+pu6RvCTM9RGMQ==}
     dev: false
 
   /string.prototype.matchall/4.0.8:
