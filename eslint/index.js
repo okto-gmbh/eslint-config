@@ -61,6 +61,10 @@ module.exports = {
     // Imports
 
     "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+        "warn",
+        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
     "import/first": "warn",
     "import/order": "off",
     "import/no-duplicates": "error",
@@ -105,6 +109,43 @@ module.exports = {
 
     "sort-keys": ["warn", "asc", { "allowLineSeparatedGroups": true, "natural": true }],
     "sort-keys-fix/sort-keys-fix": "warn",
+
+
+    // React
+
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+
+
+    // Next
+
+    "@next/next/no-document-import-in-page": "off",
+
+
+    // Accessibility
+
+    "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight"],
+            "aspects": ["invalidHref", "preferButton"]
+        }
+    ],
+
+
+    // Security
+
+    "no-secrets/no-secrets": "warn",
+    "sonarjs/no-nested-template-literals": "off",
+
+
+    // Bundle size
+
+    "no-unused-vars": [
+      "warn",
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
 
   },
   "overrides": [
@@ -360,27 +401,4 @@ module.exports = {
 
 
   ],
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "jsx-a11y/anchor-is-valid": [
-        "error",
-        {
-            "components": ["Link"],
-            "specialLink": ["hrefLeft", "hrefRight"],
-            "aspects": ["invalidHref", "preferButton"]
-        }
-    ],
-    "react/prop-types": "off",
-    "no-secrets/no-secrets": "warn",
-    "no-unused-vars": [
-        "warn",
-        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
-    ],
-    "unused-imports/no-unused-vars": [
-        "warn",
-        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
-    ],
-    "sonarjs/no-nested-template-literals": "off",
-    "@next/next/no-document-import-in-page": "off"
-  }
 }
