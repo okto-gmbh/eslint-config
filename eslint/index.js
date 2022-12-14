@@ -1,17 +1,18 @@
+/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
   },
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "extends": [
+  extends: [
     "eslint:recommended",
     "plugin:jsonc/recommended-with-jsonc",
     "plugin:yml/standard",
@@ -24,13 +25,13 @@ module.exports = {
     "plugin:security/recommended",
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
-  "plugins": [
+  plugins: [
     "@typescript-eslint",
     "unused-imports",
     "no-secrets",
@@ -45,25 +46,22 @@ module.exports = {
     "tsdoc",
     "prettier",
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
+  settings: {
+    react: {
+      version: "detect",
     },
   },
-  "rules": {
-
-
+  rules: {
     // Prettier
 
-    "prettier/prettier": ["warn", { "usePrettierrc": true }],
-
+    "prettier/prettier": ["warn", { usePrettierrc: true }],
 
     // Imports
 
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
-        "warn",
-        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+      "warn",
+      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
     ],
     "import/first": "warn",
     "import/order": "off",
@@ -73,13 +71,14 @@ module.exports = {
     "simple-import-sort/imports": [
       "warn",
       {
-        "groups": [
+        groups: [
           // Node.js builtins. You could also generate this regex if you use a `.js` config.
           // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
           // Note that if you use the `node:` prefix for Node.js builtins,
           // you can avoid this complexity: You can simply use "^node:".
           [
             "^node:",
+            // eslint-disable-next-line no-secrets/no-secrets
             "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
           ],
           // External packages.
@@ -99,93 +98,85 @@ module.exports = {
           // Styled components.
           ["^.+\\.styled\\.(j|t)sx?$", "^.+\\.styled$"],
           // JSON imports.
-          ["^.+\\.jsonc?$"]
-        ]
-      }
+          ["^.+\\.jsonc?$"],
+        ],
+      },
     ],
-
 
     // Sort object keys
 
-    "sort-keys": ["warn", "asc", { "allowLineSeparatedGroups": true, "natural": true }],
+    "sort-keys": [
+      "warn",
+      "asc",
+      { allowLineSeparatedGroups: true, natural: true },
+    ],
     "sort-keys-fix/sort-keys-fix": "warn",
-
 
     // React
 
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
 
-
     // Next
 
     "@next/next/no-document-import-in-page": "off",
 
-
     // Accessibility
 
     "jsx-a11y/anchor-is-valid": [
-        "error",
-        {
-            "components": ["Link"],
-            "specialLink": ["hrefLeft", "hrefRight"],
-            "aspects": ["invalidHref", "preferButton"]
-        }
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"],
+      },
     ],
-
 
     // Security
 
     "no-secrets/no-secrets": "warn",
     "sonarjs/no-nested-template-literals": "off",
 
-
     // Bundle size
 
     "no-unused-vars": [
       "warn",
-      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
     ],
-
   },
-  "overrides": [
-
-
+  overrides: [
     // TypeScript
 
     {
-      "files": ["*.ts", "*.tsx", ".mts", ".mtsx", ".cts", ".ctsx"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "ecmaVersion": 2020,
-        "project": ["tsconfig.json"],
-        "ecmaFeatures": {
-          "jsx": true
-        }
+      files: ["*.ts", "*.tsx", ".mts", ".mtsx", ".cts", ".ctsx"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        ecmaVersion: 2020,
+        project: ["tsconfig.json"],
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
-      "rules": {
-
-
+      rules: {
         // Sort type keys
 
         "typescript-sort-keys/interface": [
           "warn",
           "asc",
           {
-            "caseSensitive": true,
-            "natural": true,
-            "requiredFirst": true
-          }
+            caseSensitive: true,
+            natural: true,
+            requiredFirst: true,
+          },
         ],
-        "typescript-sort-keys/string-enum": "warn"
-      }
+        "typescript-sort-keys/string-enum": "warn",
+      },
     },
 
-  
     // Standalone TypeScript
 
     {
-      "files": [
+      files: [
         "**/*.config.ts",
         "**/*.config.mts",
         "**/*.config.cts",
@@ -194,52 +185,50 @@ module.exports = {
         "**/*.md/*.mts",
         "**/*.md/*.mtsx",
         "**/*.md/*.cts",
-        "**/*.md/*.ctsx"
+        "**/*.md/*.ctsx",
       ],
-      "parserOptions": {
-        "createDefaultProgram": true
-      }
+      parserOptions: {
+        createDefaultProgram: true,
+      },
     },
-
 
     // JSON
 
     {
-      "excludedFiles": ["package-lock.json", "yarn.lock"],
-      "files": ["*.json", "*.json5", "*.jsonc"],
-      "parser": "jsonc-eslint-parser",
-      "rules": {
+      excludedFiles: ["package-lock.json", "yarn.lock"],
+      files: ["*.json", "*.json5", "*.jsonc"],
+      parser: "jsonc-eslint-parser",
+      rules: {
         "jsonc/comma-dangle": ["error", "never"], // Trailing comma is invalid in JSON
         "jsonc/sort-keys": [
           "warn",
           "asc",
           {
-            "caseSensitive": false,
-            "minKeys": 2,
-            "natural": true
-          }
-        ]
-      }
+            caseSensitive: false,
+            minKeys: 2,
+            natural: true,
+          },
+        ],
+      },
     },
-
 
     // Package json
 
     {
-      "files": ["package.json"],
-      "rules": {
+      files: ["package.json"],
+      rules: {
         "jsonc/sort-keys": [
           "warn",
           {
-            "order": {
-              "caseSensitive": true,
-              "natural": true,
-              "type": "asc"
+            order: {
+              caseSensitive: true,
+              natural: true,
+              type: "asc",
             },
-            "pathPattern": "^.*..*$"
+            pathPattern: "^.*..*$",
           },
           {
-            "order": [
+            order: [
               "version",
               "type",
               "name",
@@ -272,115 +261,97 @@ module.exports = {
               "keywords",
               "volta",
               {
-                "order": {
-                  "caseSensitive": true,
-                  "natural": true,
-                  "type": "asc",
-                }
+                order: {
+                  caseSensitive: true,
+                  natural: true,
+                  type: "asc",
+                },
               },
             ],
-            "pathPattern": "^$"
+            pathPattern: "^$",
           },
           {
-            "order": [
-              "types",
-              "require",
-              "import"
-            ],
-            "pathPattern": "^exports.*$"
-          }
-        ]
-      }
+            order: ["types", "require", "import"],
+            pathPattern: "^exports.*$",
+          },
+        ],
+      },
     },
-
 
     // TSConfig json
 
     {
-      "files": ["tsconfig.json", "tsconfig.*.json"],
-      "rules": {
+      files: ["tsconfig.json", "tsconfig.*.json"],
+      rules: {
         "jsonc/sort-keys": [
           "warn",
           {
-            "order": {
-              "caseSensitive": true,
-              "natural": true,
-              "type": "asc"
+            order: {
+              caseSensitive: true,
+              natural: true,
+              type: "asc",
             },
-            "pathPattern": "^.*..*$"
+            pathPattern: "^.*..*$",
           },
           {
-            "order": [
-              "extends",
-              "compilerOptions",
-              "include",
-              "exclude"
-            ],
-            "pathPattern": "^$"
-          }
-        ]
-      }
+            order: ["extends", "compilerOptions", "include", "exclude"],
+            pathPattern: "^$",
+          },
+        ],
+      },
     },
-
 
     // eslintrc json
 
     {
-      "files": [".eslintrc.json", "eslintrc.json"],
-      "rules": {
+      files: [".eslintrc.json", "eslintrc.json"],
+      rules: {
         "jsonc/sort-keys": [
           "warn",
           {
-            "order": {
-              "caseSensitive": true,
-              "natural": true,
-              "type": "asc"
+            order: {
+              caseSensitive: true,
+              natural: true,
+              type: "asc",
             },
-            "pathPattern": "^.*..*$"
+            pathPattern: "^.*..*$",
           },
           {
-            "order": [
-              "extends",
-              "plugins",
-              "overrides",
-              "rules"
-            ],
-            "pathPattern": "^$"
-          }
-        ]
-      }
+            order: ["extends", "plugins", "overrides", "rules"],
+            pathPattern: "^$",
+          },
+        ],
+      },
     },
-
 
     // YAML
 
     {
-      "excludedFiles": ["pnpm-lock.yaml"],
-      "files": ["*.yaml", "*.yml"],
-      "parser": "yaml-eslint-parser",
-      "rules": {
-        "yml/quotes": ["warn", { "avoidEscape": true, "prefer": "double" }],
+      excludedFiles: ["pnpm-lock.yaml"],
+      files: ["*.yaml", "*.yml"],
+      parser: "yaml-eslint-parser",
+      rules: {
+        "yml/quotes": ["warn", { avoidEscape: true, prefer: "double" }],
         "yml/sort-keys": [
           "warn",
           "asc",
           {
-            "caseSensitive": false,
-            "minKeys": 2,
-            "natural": true
-          }
-        ]
-      }
+            caseSensitive: false,
+            minKeys: 2,
+            natural: true,
+          },
+        ],
+      },
     },
-
 
     // Markdown
 
     {
-      "files": ["**/*.md"],
-      "processor": "markdown/markdown"
+      files: ["**/*.md"],
+      processor: "markdown/markdown",
     },
     {
-      "files": [
+      files: [
         "**/*.md/*.ts",
         "**/*.md/*.tsx",
         "**/*.md/*.mts",
@@ -392,13 +363,11 @@ module.exports = {
         "**/*.md/*.mjs",
         "**/*.md/*.mjsx",
         "**/*.md/*.cjs",
-        "**/*.md/*.cjsx"
+        "**/*.md/*.cjsx",
       ],
-      "rules": {
-        "unused-imports/no-unused-imports": "off"
-      }
-    }
-
-
+      rules: {
+        "unused-imports/no-unused-imports": "off",
+      },
+    },
   ],
-}
+};

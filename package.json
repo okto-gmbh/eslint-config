@@ -1,24 +1,17 @@
 {
-  "name": "@authentiqagency/eslint-config",
   "version": "0.3.4",
-  "description": "ESLint and prettier config",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "type": "commonjs",
+  "name": "@authentiqagency/eslint-config",
+  "description": "ESLint and prettier config",
+  "author": "Roger Schönbächler",
+  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/authentiqagency/eslint-config.git"
   },
-  "author": "Roger Schönbächler",
   "bugs": {
     "url": "https://github.com/authentiqagency/eslint-config/issues"
   },
-  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
-  "files": [
-    "eslint",
-    "prettier"
-  ],
   "exports": {
     "./eslint": {
       "import": "./eslint/index.js",
@@ -29,13 +22,19 @@
       "require": "./prettier/index.js"
     }
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "eslint",
+    "prettier"
+  ],
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-next": "^13.0.6",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-import": "npm:eslint-plugin-i@^2.26.0-2^",
     "eslint-plugin-jsonc": "^2.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
@@ -45,6 +44,7 @@
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-sonarjs": "^0.17.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-tsdoc": "^0.2.17",

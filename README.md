@@ -19,8 +19,11 @@ pnpm config set auto-install-peers true
 ```jsonc
 // .eslintrc.json
 {
-  "extends": "@authentiqagency/eslint-config/eslint",
+  "extends": "@authentiqagency/eslint-config/eslint"
 }
+```
+
+```jsonc
 // .prettierrc
 "@authentiqagency/eslint-config/prettier"
 ```
