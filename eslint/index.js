@@ -37,6 +37,7 @@ module.exports = {
     "import",
     "simple-import-sort",
     "typescript-sort-keys",
+    "react",
     "sort-keys-fix",
     "jsonc",
     "markdown",
@@ -44,6 +45,11 @@ module.exports = {
     "tsdoc",
     "prettier",
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+  },
   "rules": {
 
 
@@ -70,12 +76,13 @@ module.exports = {
           // you can avoid this complexity: You can simply use "^node:".
           [
             "^node:",
-            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
           ],
           // External packages.
-          ["^"],
+          ["^", "^(@)(.*|$)"],
+          // q-core
+          ["^@core(.*|$)"],
           // Internal packages.
-          ["^(@)(.*|$)"],
           ["^(~)(.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
@@ -110,7 +117,10 @@ module.exports = {
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 2020,
-        "project": ["tsconfig.json"]
+        "project": ["tsconfig.json"],
+        "ecmaFeatures": {
+          "jsx": true
+        }
       },
       "rules": {
 
