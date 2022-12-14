@@ -1,5 +1,6 @@
 module.exports = {
   customSyntax: "@stylelint/postcss-css-in-js",
+  defaultSeverity: "warning",
   extends: [
     "stylelint-config-standard",
     "stylelint-config-recommended",
