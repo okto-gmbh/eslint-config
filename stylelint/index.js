@@ -9,7 +9,7 @@ module.exports = {
   ],
   rules: {
     "custom-property-empty-line-before": null,
-    "custom-property-pattern": "^(-?[a-z0-9]+[A-Za-z0-9]*)+$",
+    "custom-property-pattern": "^(-?[_a-z0-9]+[A-Za-z0-9]*)+$",
     "declaration-empty-line-before": null,
     "function-name-case": null,
     "function-no-unknown": [true, { ignoreFunctions: ["/\\${/"] }],
