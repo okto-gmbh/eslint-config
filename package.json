@@ -1,5 +1,5 @@
 {
-  "version": "0.4.2",
+  "version": "0.4.3",
   "type": "commonjs",
   "name": "@authentiqagency/eslint-config",
   "description": "ESLint and prettier config",
