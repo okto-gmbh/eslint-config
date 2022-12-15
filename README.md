@@ -5,13 +5,7 @@ Shared eslint config.
 ## Installation
 
 ```sh
-pnpm i --save-dev @authentiqagency/eslint-config
-```
-
-It is also recommended to let pnpm auto install peer dependencies:
-
-```sh
-pnpm config set auto-install-peers true
+yarn i --save-dev @authentiqagency/eslint-config
 ```
 
 ## Usage
@@ -119,8 +113,8 @@ If you want to have linting scripts, you can use something like this in the `pac
 {
   "scripts": {
     "lint": "node_modules/.bin/eslint --ext .ts,.tsx,.js,.jsx,.json,.jsonc,.yml,.md ./",
-    "lint:ci": "pnpm run lint -- --max-warnings 0",
-    "lint:fix": "pnpm run lint -- --fix"
+    "lint:ci": "yarn run lint -- --max-warnings 0",
+    "lint:fix": "yarn run lint -- --fix"
   }
 }
 ```
