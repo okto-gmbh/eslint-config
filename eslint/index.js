@@ -53,11 +53,9 @@ module.exports = {
   },
   rules: {
     // Prettier
-
     "prettier/prettier": ["warn", { usePrettierrc: true }],
 
     // Imports
-
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
       "warn",
@@ -104,7 +102,6 @@ module.exports = {
     ],
 
     // Sort object keys
-
     "sort-keys": [
       "warn",
       "asc",
@@ -113,16 +110,13 @@ module.exports = {
     "sort-keys-fix/sort-keys-fix": "warn",
 
     // React
-
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
 
     // Next
-
     "@next/next/no-document-import-in-page": "off",
 
     // Accessibility
-
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -133,12 +127,10 @@ module.exports = {
     ],
 
     // Security
-
     "no-secrets/no-secrets": "warn",
     "sonarjs/no-nested-template-literals": "off",
 
     // Bundle size
-
     "no-unused-vars": [
       "warn",
       { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
@@ -146,7 +138,6 @@ module.exports = {
   },
   overrides: [
     // TypeScript
-
     {
       files: ["*.ts", "*.tsx", ".mts", ".mtsx", ".cts", ".ctsx"],
       parser: "@typescript-eslint/parser",
@@ -159,7 +150,6 @@ module.exports = {
       },
       rules: {
         // Sort type keys
-
         "typescript-sort-keys/interface": [
           "warn",
           "asc",
@@ -173,8 +163,16 @@ module.exports = {
       },
     },
 
-    // Standalone TypeScript
+    // Styled components
+    {
+      files: ["*styled.js", "*styled.ts", "*styled.jsx", "*styled.tsx"],
+      rules: {
+        "sort-keys": "off",
+        "sort-keys-fix/sort-keys-fix": "off",
+      },
+    },
 
+    // Standalone TypeScript
     {
       files: [
         "**/*.config.ts",
@@ -193,7 +191,6 @@ module.exports = {
     },
 
     // JSON
-
     {
       excludedFiles: ["package-lock.json", "yarn.lock"],
       files: ["*.json", "*.json5", "*.jsonc"],
@@ -213,7 +210,6 @@ module.exports = {
     },
 
     // Package json
-
     {
       files: ["package.json"],
       rules: {
@@ -279,7 +275,6 @@ module.exports = {
     },
 
     // TSConfig json
-
     {
       files: ["tsconfig.json", "tsconfig.*.json"],
       rules: {
@@ -302,7 +297,6 @@ module.exports = {
     },
 
     // eslintrc json
-
     {
       files: [".eslintrc.json", "eslintrc.json"],
       rules: {
@@ -325,7 +319,6 @@ module.exports = {
     },
 
     // YAML
-
     {
       excludedFiles: ["pnpm-lock.yaml"],
       files: ["*.yaml", "*.yml"],
@@ -345,7 +338,6 @@ module.exports = {
     },
 
     // Markdown
-
     {
       files: ["**/*.md"],
       processor: "markdown/markdown",
