@@ -184,6 +184,7 @@ module.exports = {
         "**/*.md/*.mtsx",
         "**/*.md/*.cts",
         "**/*.md/*.ctsx",
+        "**/*.d.ts",
       ],
       parserOptions: {
         createDefaultProgram: true,
