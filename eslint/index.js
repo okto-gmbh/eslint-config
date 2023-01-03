@@ -39,7 +39,7 @@ module.exports = {
     "simple-import-sort",
     "typescript-sort-keys",
     "react",
-    "sort-keys-fix",
+    "sort-keys",
     "jsonc",
     "markdown",
     "yml",
@@ -102,12 +102,12 @@ module.exports = {
     ],
 
     // Sort object keys
-    "sort-keys": [
+    "sort-keys": "off",
+    "sort-keys/sort-keys-fix": [
       "warn",
       "asc",
       { allowLineSeparatedGroups: true, natural: true },
     ],
-    "sort-keys-fix/sort-keys-fix": "warn",
 
     // React
     "react/react-in-jsx-scope": "off",
