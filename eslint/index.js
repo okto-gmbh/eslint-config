@@ -103,11 +103,7 @@ module.exports = {
 
     // Sort object keys
     "sort-keys": "off",
-    "sort-keys/sort-keys-fix": [
-      "warn",
-      "asc",
-      { allowLineSeparatedGroups: true, natural: true },
-    ],
+    "sort-keys/sort-keys-fix": "warn",
 
     // React
     "react/react-in-jsx-scope": "off",
