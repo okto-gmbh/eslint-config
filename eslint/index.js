@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
+/* eslint-disable sort-keys/sort-keys-fix */
 module.exports = {
   env: {
     browser: true,
@@ -178,6 +178,15 @@ module.exports = {
       ],
       parserOptions: {
         createDefaultProgram: true,
+      },
+    },
+
+    // settings.js
+    {
+      files: ["settings.js"],
+      rules: {
+        "sort-keys": "off",
+        "sort-keys/sort-keys-fix": "off",
       },
     },
 
