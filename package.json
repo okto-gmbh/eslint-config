@@ -1,5 +1,5 @@
 {
-  "version": "0.4.11",
+  "version": "0.4.16",
   "type": "commonjs",
   "name": "@okto-gmbh/eslint-config",
   "description": "ESLint and prettier config",
@@ -52,10 +52,9 @@
     "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-sonarjs": "^0.17.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-sort-keys": "^2.3.5",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "eslint-plugin-yml": "^1.3.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.8.1",

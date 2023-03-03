@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
+/* eslint-disable sort-keys/sort-keys-fix */
 module.exports = {
   env: {
     browser: true,
@@ -33,13 +33,12 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
-    "unused-imports",
     "no-secrets",
     "import",
     "simple-import-sort",
     "typescript-sort-keys",
     "react",
-    "sort-keys-fix",
+    "sort-keys",
     "jsonc",
     "markdown",
     "yml",
@@ -56,11 +55,6 @@ module.exports = {
     "prettier/prettier": ["warn", { usePrettierrc: true }],
 
     // Imports
-    "unused-imports/no-unused-imports": "warn",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
-    ],
     "import/first": "warn",
     "import/order": "off",
     "import/no-duplicates": "error",
@@ -102,12 +96,8 @@ module.exports = {
     ],
 
     // Sort object keys
-    "sort-keys": [
-      "warn",
-      "asc",
-      { allowLineSeparatedGroups: true, natural: true },
-    ],
-    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-keys": "off",
+    "sort-keys/sort-keys-fix": "warn",
 
     // React
     "react/react-in-jsx-scope": "off",
@@ -188,6 +178,15 @@ module.exports = {
       ],
       parserOptions: {
         createDefaultProgram: true,
+      },
+    },
+
+    // settings.js
+    {
+      files: ["settings.js"],
+      rules: {
+        "sort-keys": "off",
+        "sort-keys/sort-keys-fix": "off",
       },
     },
 
@@ -358,9 +357,6 @@ module.exports = {
         "**/*.md/*.cjs",
         "**/*.md/*.cjsx",
       ],
-      rules: {
-        "unused-imports/no-unused-imports": "off",
-      },
     },
   ],
 };
