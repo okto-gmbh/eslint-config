@@ -1,16 +1,16 @@
 {
   "version": "0.4.11",
   "type": "commonjs",
-  "name": "@authentiqagency/eslint-config",
+  "name": "@okto-gmbh/eslint-config",
   "description": "ESLint and prettier config",
   "author": "Roger Schönbächler",
-  "homepage": "https://github.com/authentiqagency/eslint-config#readme",
+  "homepage": "https://github.com/okto-gmbh/eslint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/authentiqagency/eslint-config.git"
+    "url": "git+https://github.com/okto-gmbh/eslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/authentiqagency/eslint-config/issues"
+    "url": "https://github.com/okto-gmbh/eslint-config/issues"
   },
   "exports": {
     "./eslint": {

@@ -5,7 +5,7 @@ This repository contains shared configs for ESLint, Stylelint and Prettier.
 ## Installation
 
 ```bash
-yarn i --save-dev @authentiqagency/eslint-config
+yarn i --save-dev @okto-gmbh/eslint-config
 ```
 
 ## Usage
@@ -13,20 +13,20 @@ yarn i --save-dev @authentiqagency/eslint-config
 ```jsonc
 // .eslintrc
 {
-  "extends": "@authentiqagency/eslint-config/eslint"
+  "extends": "@okto-gmbh/eslint-config/eslint"
 }
 ```
 
 ```jsonc
 // .stylelintrc
 {
-    "extends": "@authentiqagency/eslint-config/stylelint"
+    "extends": "@okto-gmbh/eslint-config/stylelint"
 }
 ```
 
 ```jsonc
 // .prettierrc
-"@authentiqagency/eslint-config/prettier"
+"@okto-gmbh/eslint-config/prettier"
 ```
 
 ## VSCode integration
