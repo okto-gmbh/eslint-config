@@ -5,7 +5,7 @@ This repository contains shared configs for ESLint, Stylelint and Prettier.
 ## Installation
 
 ```bash
-yarn i --save-dev @okto-gmbh/eslint-config
+yarn add -D @okto-gmbh/eslint-config
 ```
 
 ## Usage
