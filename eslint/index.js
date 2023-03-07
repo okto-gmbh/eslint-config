@@ -33,6 +33,7 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
+    "unused-imports",
     "no-secrets",
     "import",
     "simple-import-sort",
@@ -55,6 +56,11 @@ module.exports = {
     "prettier/prettier": ["warn", { usePrettierrc: true }],
 
     // Imports
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
+    ],
     "import/first": "warn",
     "import/order": "off",
     "import/no-duplicates": "error",
@@ -357,6 +363,9 @@ module.exports = {
         "**/*.md/*.cjs",
         "**/*.md/*.cjsx",
       ],
+      rules: {
+        "unused-imports/no-unused-imports": "off",
+      },
     },
   ],
 };
