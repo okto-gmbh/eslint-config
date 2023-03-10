@@ -1,5 +1,5 @@
 {
-  "version": "0.4.17",
+  "version": "0.5.0-alpha.0",
   "type": "commonjs",
   "name": "@okto-gmbh/eslint-config",
   "description": "ESLint and prettier config",
@@ -22,8 +22,16 @@
       "require": "./prettier/index.js"
     },
     "./stylelint": {
-      "import": "./stylelint/index.js",
-      "require": "./stylelint/index.js"
+      "import": "./stylelint/css-in-js/index.js",
+      "require": "./stylelint/css-in-js/index.js"
+    },
+    "./stylelint/css-modules": {
+      "import": "./stylelint/css-modules/index.js",
+      "require": "./stylelint/css-modules/index.js"
+    },
+    "./stylelint/css-in-js": {
+      "import": "./stylelint/css-in-js/index.js",
+      "require": "./stylelint/css-in-js/index.js"
     }
   },
   "scripts": {
@@ -61,7 +69,6 @@
     "prettier": "^2.8.4",
     "stylelint": "15.2.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
-    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended": "10.0.1",
     "stylelint-config-standard": "30.0.1",
     "typescript": "^4.9.5"

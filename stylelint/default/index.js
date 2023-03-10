@@ -1,11 +1,9 @@
 module.exports = {
-  customSyntax: "@stylelint/postcss-css-in-js",
   defaultSeverity: "warning",
   extends: [
     "stylelint-config-standard",
     "stylelint-config-recommended",
     "stylelint-config-idiomatic-order",
-    "stylelint-config-prettier",
   ],
   rules: {
     "custom-property-empty-line-before": null,
