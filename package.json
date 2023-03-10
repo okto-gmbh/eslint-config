@@ -1,5 +1,5 @@
 {
-    "version": "0.5.0-alpha.0",
+    "version": "0.5.0-alpha.4",
     "type": "commonjs",
     "name": "@okto-gmbh/eslint-config",
     "description": "ESLint and prettier config",
@@ -22,16 +22,8 @@
             "require": "./prettier/index.js"
         },
         "./stylelint": {
-            "import": "./stylelint/css-in-js/index.js",
-            "require": "./stylelint/css-in-js/index.js"
-        },
-        "./stylelint/css-in-js": {
-            "import": "./stylelint/css-in-js/index.js",
-            "require": "./stylelint/css-in-js/index.js"
-        },
-        "./stylelint/css-modules": {
-            "import": "./stylelint/css-modules/index.js",
-            "require": "./stylelint/css-modules/index.js"
+            "import": "./stylelint/index.js",
+            "require": "./stylelint/index.js"
         }
     },
     "scripts": {
