@@ -3,7 +3,8 @@ module.exports = {
     extends: [
         'stylelint-config-standard',
         'stylelint-config-recommended',
-        'stylelint-config-idiomatic-order'
+        'stylelint-config-idiomatic-order',
+        'stylelint-prettier/recommended'
     ],
     overrides: [
         {
@@ -20,6 +21,7 @@ module.exports = {
             ]
         }
     ],
+    plugins: ['stylelint-prettier'],
     rules: {
         'custom-property-empty-line-before': null,
         'custom-property-pattern': '^(-?[_a-z0-9]+[A-Za-z0-9]*)+$',

@@ -64,6 +64,11 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
 
 ```jsonc
 {
+
+    // Stylelint
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
     // ESLint
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -114,11 +119,11 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
         "javascript",
         "javascriptreact",
         "typescript",
-        "typescriptreact"
+        "typescriptreact",
         "css",
         "less",
         "scss",
-        "postcss",
+        "postcss"
     ]
 }
 ```
