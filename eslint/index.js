@@ -119,6 +119,7 @@ module.exports = {
     // Security
     "no-secrets/no-secrets": "warn",
     "sonarjs/no-nested-template-literals": "off",
+    "security/detect-object-injection": "off",
 
     // Bundle size
     "no-unused-vars": [
