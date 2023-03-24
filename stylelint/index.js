@@ -18,6 +18,7 @@ module.exports = {
     "no-empty-source": null,
     "no-invalid-double-slash-comments": null,
     "no-missing-end-of-source-newline": null,
+    "declaration-block-no-redundant-longhand-properties": null, // TODO: re-enable when https://github.com/stylelint/stylelint/issues/6701 is fixed
     "property-no-unknown": [
       true,
       {
