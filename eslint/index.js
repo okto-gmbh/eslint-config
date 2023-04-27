@@ -101,9 +101,10 @@ module.exports = {
             }
         ],
 
-        // Sort object keys
+        // object keys
         'sort-keys': 'off',
         'sort-keys/sort-keys-fix': 'warn',
+        'object-shorthand': ['warn', 'always'],
 
         // React
         'react/react-in-jsx-scope': 'off',
@@ -125,7 +126,7 @@ module.exports = {
         // Security
         'no-secrets/no-secrets': 'warn',
         'sonarjs/no-nested-template-literals': 'off',
-        "security/detect-object-injection": "off",
+        'security/detect-object-injection': 'off',
 
         // Bundle size
         'no-unused-vars': [
