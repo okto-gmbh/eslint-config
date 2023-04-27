@@ -104,7 +104,7 @@ module.exports = {
         // object keys
         'sort-keys': 'off',
         'sort-keys/sort-keys-fix': 'warn',
-        'object-shorthand': ['warn', 'always'],
+        'object-shorthand': ['warn', 'always', { avoidQuotes: true }],
 
         // React
         'react/react-in-jsx-scope': 'off',
