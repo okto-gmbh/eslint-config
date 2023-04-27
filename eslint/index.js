@@ -106,6 +106,9 @@ module.exports = {
         'sort-keys/sort-keys-fix': 'warn',
         'object-shorthand': ['warn', 'always', { avoidQuotes: true }],
 
+        // Functions
+        'arrow-body-style': ['warn', 'as-needed'],
+
         // React
         'react/react-in-jsx-scope': 'off',
         'react/prop-types': 'off',
