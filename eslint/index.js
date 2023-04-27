@@ -101,7 +101,7 @@ module.exports = {
             }
         ],
 
-        // object keys
+        // Object keys
         'sort-keys': 'off',
         'sort-keys/sort-keys-fix': 'warn',
         'object-shorthand': ['warn', 'always', { avoidQuotes: true }],
