@@ -1,5 +1,5 @@
 {
-    "version": "0.8.0",
+    "version": "0.9.0-beta.4",
     "type": "commonjs",
     "name": "@okto-gmbh/eslint-config",
     "description": "ESLint and prettier config",
@@ -24,6 +24,10 @@
         "./stylelint": {
             "import": "./stylelint/index.js",
             "require": "./stylelint/index.js"
+        },
+        "./tsconfig": {
+            "import": "./tsconfig/tsconfig.json",
+            "require": "./tsconfig/tsconfig.json"
         }
     },
     "scripts": {
@@ -32,7 +36,8 @@
     "files": [
         "eslint",
         "prettier",
-        "stylelint"
+        "stylelint",
+        "tsconfig"
     ],
     "dependencies": {
         "@stylelint/postcss-css-in-js": "^0.38.0",
@@ -64,6 +69,10 @@
         "stylelint-config-recommended": "12.0.0",
         "stylelint-config-standard": "33.0.0",
         "stylelint-prettier": "^3.0.0",
-        "typescript": "^5.0.4"
+        "typescript": "^5.0.4",
+        "vite": "^4.3.6",
+        "vite-tsconfig-paths": "^4.2.0",
+        "vitest": "^0.31.0",
+        "vitest-github-actions-reporter": "^0.10.0"
     }
 }
