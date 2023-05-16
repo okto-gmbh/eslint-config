@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["ESNext"],
+        "module": "ESNext",
+        "moduleResolution": "NodeNext",
+        "newLine": "lf",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": false,
+        "noImplicitThis": true,
+        "noUncheckedIndexedAccess": false,
+        "pretty": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "stripInternal": true,
+        "target": "ES6"
+    }
+}
