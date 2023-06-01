@@ -1,6 +1,6 @@
 const { default: tsconfigPaths } = require('vite-tsconfig-paths')
 const GithubActionsReporter = require('vitest-github-actions-reporter')
-const defineConfig = require('vitest/config').defineConfig
+const { defineConfig } = require('vitest/config')
 
 module.exports = {
     config: {
