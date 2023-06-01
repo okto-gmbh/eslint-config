@@ -1,5 +1,5 @@
 {
-    "version": "0.9.0-beta.12",
+    "version": "0.9.0-beta.23",
     "type": "commonjs",
     "name": "@okto-gmbh/eslint-config",
     "description": "ESLint and prettier config",
@@ -13,26 +13,11 @@
         "url": "https://github.com/okto-gmbh/eslint-config/issues"
     },
     "exports": {
-        "./eslint": {
-            "import": "./eslint/index.js",
-            "require": "./eslint/index.js"
-        },
-        "./prettier": {
-            "import": "./prettier/index.js",
-            "require": "./prettier/index.js"
-        },
-        "./stylelint": {
-            "import": "./stylelint/index.js",
-            "require": "./stylelint/index.js"
-        },
-        "./tsconfig": {
-            "import": "./tsconfig/tsconfig.json",
-            "require": "./tsconfig/tsconfig.json"
-        },
-        "./vite": {
-            "import": "./vite/vite.config.js",
-            "require": "./vite/vite.config.js"
-        }
+        "./eslint": "./eslint/index.js",
+        "./prettier": "./prettier/index.js",
+        "./stylelint": "./stylelint/index.js",
+        "./tsconfig": "./tsconfig/tsconfig.json",
+        "./vite": "./vite/vite.config.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
