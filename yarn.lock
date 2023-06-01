@@ -1227,6 +1227,13 @@ eslint-plugin-sonarjs@^0.19.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.19.0.tgz#6654bc1c6d24c2183891b8bfe1175004dbba1e3c"
   integrity sha512-6+s5oNk5TFtVlbRxqZN7FIGmjdPCYQKaTzFPmqieCmsU1kBYDzndTeQav0xtQNwZJWu5awWfTGe8Srq9xFOGnw==
 
+eslint-plugin-sort-destructure-keys@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sort-destructure-keys/-/eslint-plugin-sort-destructure-keys-1.5.0.tgz#dc45ff119b6886d4e72d3e0ff8a528af83b89388"
+  integrity sha512-xGLyqHtbFXZNXQSvAiQ4ISBYokrbUywEhmaA50fKtSKgceCv5y3zjoNuZwcnajdM6q29Nxj+oXC9KcqfMsAPrg==
+  dependencies:
+    natural-compare-lite "^1.4.0"
+
 eslint-plugin-sort-keys@^2.3.5:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/eslint-plugin-sort-keys/-/eslint-plugin-sort-keys-2.3.5.tgz#f28d5cd2f5ee0fc5192f5ff879f56f8516aac57b"
