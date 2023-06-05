@@ -40,6 +40,7 @@ module.exports = {
         'typescript-sort-keys',
         'react',
         'sort-keys',
+        'sort-destructure-keys',
         'jsonc',
         'markdown',
         'yml',
@@ -104,6 +105,7 @@ module.exports = {
         // Object keys
         'sort-keys': 'off',
         'sort-keys/sort-keys-fix': 'warn',
+        'sort-destructure-keys/sort-destructure-keys': 'warn',
         'object-shorthand': ['warn', 'always', { avoidQuotes: true }],
 
         // Functions
