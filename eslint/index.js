@@ -97,7 +97,23 @@ module.exports = {
                     // Styled components.
                     ['^.+\\.styled\\.(j|t)sx?$', '^.+\\.styled$'],
                     // JSON imports.
-                    ['^.+\\.jsonc?$']
+                    ['^.+\\.jsonc?$'],
+
+                    // Type imports
+                    ['^node:(.*)\\u0000$'],
+                    // Types from external packages.
+                    ['\\u0000$'],
+                    // Types from internal packages.
+                    ['^@(.*)\\u0000$'],
+                    ['^(?!node:)(.*):(.*)\\u0000$'],
+                    // Types from parent imports. Put `..` last.
+                    ['^\\.\\.(?=/?\\u0000$)', '^\\.\\./?\\u0000$'],
+                    // Types from other relative imports. Put same-folder imports and `.` last.
+                    [
+                        '^\\./(?=.*\\u0000$)',
+                        '^\\.(?=/?\\u0000$)',
+                        '^\\./?\\u0000$'
+                    ]
                 ]
             }
         ],
@@ -162,7 +178,11 @@ module.exports = {
                         requiredFirst: true
                     }
                 ],
-                'typescript-sort-keys/string-enum': 'warn'
+                'typescript-sort-keys/string-enum': 'warn',
+                '@typescript-eslint/consistent-type-imports': [
+                    'warn',
+                    { disallowTypeAnnotations: false }
+                ]
             }
         },
 
