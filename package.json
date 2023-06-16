@@ -1,5 +1,5 @@
 {
-    "version": "0.10.2",
+    "version": "0.11.0",
     "type": "commonjs",
     "name": "@okto-gmbh/eslint-config",
     "description": "ESLint and prettier config",
@@ -53,6 +53,7 @@
         "eslint-plugin-typescript-sort-keys": "^2.3.0",
         "eslint-plugin-unused-imports": "^2.0.0",
         "eslint-plugin-yml": "^1.7.0",
+        "eslint-plugin-vitest": "^0.2.6",
         "postcss-syntax": "^0.36.2",
         "prettier": "^2.8.8",
         "stylelint": "15.7.0",

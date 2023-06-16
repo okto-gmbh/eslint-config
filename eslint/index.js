@@ -45,7 +45,8 @@ module.exports = {
         'markdown',
         'yml',
         'tsdoc',
-        'prettier'
+        'prettier',
+        'vitest'
     ],
     settings: {
         react: {
@@ -153,7 +154,24 @@ module.exports = {
         'no-unused-vars': [
             'warn',
             { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
-        ]
+        ],
+
+        // Vitest
+        'vitest/expect-expect': 'warn',
+        'vitest/no-alias-methods': 'warn',
+        'vitest/no-identical-title': 'warn',
+        'vitest/prefer-comparison-matcher': 'warn',
+        'vitest/prefer-each': 'warn',
+        'vitest/prefer-equality-matcher': 'warn',
+        'vitest/prefer-expect-resolves': 'warn',
+        'vitest/prefer-lowercase-title': 'warn',
+        'vitest/prefer-to-be': 'warn',
+        'vitest/prefer-to-be-object': 'warn',
+        'vitest/prefer-to-contain': 'warn',
+        'vitest/prefer-to-have-length': 'warn',
+        'vitest/prefer-todo': 'warn',
+        'vitest/valid-expect': 'warn',
+        'vitest/valid-title': 'warn'
     },
     overrides: [
         // TypeScript
