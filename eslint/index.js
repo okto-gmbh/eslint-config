@@ -90,9 +90,13 @@ module.exports = {
                     // Side effect imports.
                     ['^\\u0000'],
                     // Parent imports. Put `..` last.
-                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    ['^\\.\\.(?!/?.*\\u0000$)', '^\\.\\./?(?!.*\\u0000$)'],
                     // Other relative imports. Put same-folder imports and `.` last.
-                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    [
+                        '^\\./(?=.*/)(?!/?.*\\u0000$)',
+                        '^\\.(?!/?.*\\u0000$)',
+                        '^\\./?(?!.*\\u0000$)'
+                    ],
                     // Style imports.
                     ['^.+\\.s?css$'],
                     // Styled components.
