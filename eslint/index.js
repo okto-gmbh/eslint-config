@@ -163,7 +163,6 @@ module.exports = {
         'vitest/prefer-comparison-matcher': 'warn',
         'vitest/prefer-each': 'warn',
         'vitest/prefer-equality-matcher': 'warn',
-        'vitest/prefer-expect-resolves': 'warn',
         'vitest/prefer-lowercase-title': 'warn',
         'vitest/prefer-to-be': 'warn',
         'vitest/prefer-to-be-object': 'warn',
