@@ -29,6 +29,13 @@ yarn add -D @okto-gmbh/eslint-config
 "@okto-gmbh/eslint-config/prettier"
 ```
 
+```jsonc
+// tsconfig.json
+{
+    "extends": "@okto-gmbh/eslint-config/tsconfig"
+}
+```
+
 ## VSCode integration
 
 For automatic code formatting on save, install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and the [stylelint]() config.
@@ -55,9 +62,6 @@ It should also be configured which files and directories should be excluded from
 *.min.js
 plop-templates
 node_modules
-scripts
-q-core/lib
-q-core/node_modules
 ```
 
 To configure the extension properly, create a `.vscode/settings.json` with the following content:
@@ -124,7 +128,11 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
         "less",
         "scss",
         "postcss"
-    ]
+    ],
+
+    // Module import
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.useAliasesForRenames": true
 }
 ```
 
