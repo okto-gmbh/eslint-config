@@ -151,6 +151,8 @@ module.exports = {
 
         // Security
         'no-secrets/no-secrets': 'warn',
+        'sonarjs/cognitive-complexity': 'warn',
+        'sonarjs/no-duplicate-string': 'warn',
         'sonarjs/no-nested-template-literals': 'off',
         'security/detect-object-injection': 'off',
 
