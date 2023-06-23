@@ -202,10 +202,15 @@ module.exports = {
                     }
                 ],
                 'typescript-sort-keys/string-enum': 'warn',
+
+                // Type imports
                 '@typescript-eslint/consistent-type-imports': [
                     'warn',
                     { disallowTypeAnnotations: false }
-                ]
+                ],
+
+                // Promises
+                '@typescript-eslint/no-floating-promises': 'warn'
             }
         },
 
