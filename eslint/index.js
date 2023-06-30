@@ -72,6 +72,8 @@ module.exports = {
             'warn',
             {
                 groups: [
+                    // Side effect imports.
+                    ['^\\u0000'],
                     // Node.js builtins. You could also generate this regex if you use a `.js` config.
                     // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
                     // Note that if you use the `node:` prefix for Node.js builtins,
@@ -87,8 +89,6 @@ module.exports = {
                     ['^@core(.*|$)'],
                     // Internal packages.
                     ['^(~)(.*|$)'],
-                    // Side effect imports.
-                    ['^\\u0000'],
                     // Parent imports. Put `..` last.
                     ['^\\.\\.(?!/?.*\\u0000$)', '^\\.\\./?(?!.*\\u0000$)'],
                     // Other relative imports. Put same-folder imports and `.` last.
