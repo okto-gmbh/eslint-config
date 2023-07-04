@@ -40,11 +40,13 @@ module.exports = {
         'typescript-sort-keys',
         'react',
         'sort-keys',
+        'sort-destructure-keys',
         'jsonc',
         'markdown',
         'yml',
         'tsdoc',
-        'prettier'
+        'prettier',
+        'vitest'
     ],
     settings: {
         react: {
@@ -70,6 +72,8 @@ module.exports = {
             'warn',
             {
                 groups: [
+                    // Side effect imports.
+                    ['^\\u0000'],
                     // Node.js builtins. You could also generate this regex if you use a `.js` config.
                     // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
                     // Note that if you use the `node:` prefix for Node.js builtins,
@@ -85,25 +89,48 @@ module.exports = {
                     ['^@core(.*|$)'],
                     // Internal packages.
                     ['^(~)(.*|$)'],
-                    // Side effect imports.
-                    ['^\\u0000'],
                     // Parent imports. Put `..` last.
-                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    ['^\\.\\.(?!/?.*\\u0000$)', '^\\.\\./?(?!.*\\u0000$)'],
                     // Other relative imports. Put same-folder imports and `.` last.
-                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    [
+                        '^\\./(?=.*/)(?!/?.*\\u0000$)',
+                        '^\\.(?!/?.*\\u0000$)',
+                        '^\\./?(?!.*\\u0000$)'
+                    ],
                     // Style imports.
                     ['^.+\\.s?css$'],
                     // Styled components.
                     ['^.+\\.styled\\.(j|t)sx?$', '^.+\\.styled$'],
                     // JSON imports.
-                    ['^.+\\.jsonc?$']
+                    ['^.+\\.jsonc?$'],
+
+                    // Type imports
+                    ['^node:(.*)\\u0000$'],
+                    // Types from external packages.
+                    ['\\u0000$'],
+                    // Types from internal packages.
+                    ['^@(.*)\\u0000$'],
+                    ['^(?!node:)(.*):(.*)\\u0000$'],
+                    // Types from parent imports. Put `..` last.
+                    ['^\\.\\.(?=/?\\u0000$)', '^\\.\\./?\\u0000$'],
+                    // Types from other relative imports. Put same-folder imports and `.` last.
+                    [
+                        '^\\./(?=.*\\u0000$)',
+                        '^\\.(?=/?\\u0000$)',
+                        '^\\./?\\u0000$'
+                    ]
                 ]
             }
         ],
 
-        // Sort object keys
+        // Object keys
         'sort-keys': 'off',
         'sort-keys/sort-keys-fix': 'warn',
+        'sort-destructure-keys/sort-destructure-keys': 'warn',
+        'object-shorthand': ['warn', 'always', { avoidQuotes: true }],
+
+        // Functions
+        'arrow-body-style': ['warn', 'as-needed'],
 
         // React
         'react/react-in-jsx-scope': 'off',
@@ -124,14 +151,32 @@ module.exports = {
 
         // Security
         'no-secrets/no-secrets': 'warn',
+        'sonarjs/cognitive-complexity': 'warn',
+        'sonarjs/no-duplicate-string': 'warn',
         'sonarjs/no-nested-template-literals': 'off',
-        "security/detect-object-injection": "off",
+        'security/detect-object-injection': 'off',
 
         // Bundle size
         'no-unused-vars': [
             'warn',
             { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
-        ]
+        ],
+
+        // Vitest
+        'vitest/expect-expect': 'warn',
+        'vitest/no-alias-methods': 'warn',
+        'vitest/no-identical-title': 'warn',
+        'vitest/prefer-comparison-matcher': 'warn',
+        'vitest/prefer-each': 'warn',
+        'vitest/prefer-equality-matcher': 'warn',
+        'vitest/prefer-lowercase-title': 'warn',
+        'vitest/prefer-to-be': 'warn',
+        'vitest/prefer-to-be-object': 'warn',
+        'vitest/prefer-to-contain': 'warn',
+        'vitest/prefer-to-have-length': 'warn',
+        'vitest/prefer-todo': 'warn',
+        'vitest/valid-expect': 'warn',
+        'vitest/valid-title': 'warn'
     },
     overrides: [
         // TypeScript
@@ -156,7 +201,16 @@ module.exports = {
                         requiredFirst: true
                     }
                 ],
-                'typescript-sort-keys/string-enum': 'warn'
+                'typescript-sort-keys/string-enum': 'warn',
+
+                // Type imports
+                '@typescript-eslint/consistent-type-imports': [
+                    'warn',
+                    { disallowTypeAnnotations: false }
+                ],
+
+                // Promises
+                '@typescript-eslint/no-floating-promises': 'warn'
             }
         },
 
