@@ -130,6 +130,14 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
         "postcss"
     ],
 
+    // File nesting
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.d.ts": "$(capture).test-d.ts",
+        "*.ts": "$(capture).test.ts,$(capture).spec.ts,$(capture).test.snap"
+    },
+
     // Tailwind CSS
     "files.associations": {
         "*.css": "tailwindcss"
@@ -138,9 +146,17 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
         "strings": true
     },
 
+    // CVA
+    "tailwindCSS.experimental.classRegex": [
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ],
+
     // Module import
     "typescript.preferences.importModuleSpecifier": "non-relative",
-    "typescript.preferences.useAliasesForRenames": true
+    "typescript.preferences.useAliasesForRenames": true,
+
+    // TypeScript
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
 ```
 
