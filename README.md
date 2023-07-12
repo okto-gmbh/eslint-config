@@ -130,6 +130,14 @@ To configure the extension properly, create a `.vscode/settings.json` with the f
         "postcss"
     ],
 
+    // Tailwind CSS
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+
     // Module import
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "typescript.preferences.useAliasesForRenames": true

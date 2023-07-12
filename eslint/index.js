@@ -46,6 +46,7 @@ module.exports = {
         'yml',
         'tsdoc',
         'prettier',
+        'tailwindcss',
         'vitest'
     ],
     settings: {
@@ -161,6 +162,14 @@ module.exports = {
             'warn',
             { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
         ],
+
+        // Tailwind CSS
+
+        'tailwindcss/classnames-order': 'warn',
+        'tailwindcss/enforces-negative-arbitrary-values': 'warn',
+        'tailwindcss/enforces-shorthand': 'warn',
+        'tailwindcss/no-contradicting-classname': 'warn',
+        'tailwindcss/no-custom-classname': 'off',
 
         // Vitest
         'vitest/expect-expect': 'warn',
