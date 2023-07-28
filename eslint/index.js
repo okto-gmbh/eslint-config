@@ -150,6 +150,13 @@ module.exports = {
             }
         ],
 
+        // Quotes
+        quotes: [
+            'warn',
+            'single',
+            { avoidEscape: true, allowTemplateLiterals: false }
+        ],
+
         // Security
         'no-secrets/no-secrets': 'warn',
         'sonarjs/cognitive-complexity': 'warn',
@@ -164,7 +171,6 @@ module.exports = {
         ],
 
         // Tailwind CSS
-
         'tailwindcss/classnames-order': 'warn',
         'tailwindcss/enforces-negative-arbitrary-values': 'warn',
         'tailwindcss/enforces-shorthand': 'warn',
@@ -216,6 +222,14 @@ module.exports = {
                 '@typescript-eslint/consistent-type-imports': [
                     'warn',
                     { disallowTypeAnnotations: false }
+                ],
+
+                // Quotes
+                quotes: 'off',
+                '@typescript-eslint/quotes': [
+                    'warn',
+                    'single',
+                    { avoidEscape: true, allowTemplateLiterals: false }
                 ],
 
                 // Promises
