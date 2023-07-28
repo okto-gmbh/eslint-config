@@ -151,8 +151,7 @@ module.exports = {
         ],
 
         // Quotes
-        quotes: 'off',
-        '@typescript-eslint/quotes': [
+        quotes: [
             'warn',
             'single',
             { avoidEscape: true, allowTemplateLiterals: false }
@@ -223,6 +222,14 @@ module.exports = {
                 '@typescript-eslint/consistent-type-imports': [
                     'warn',
                     { disallowTypeAnnotations: false }
+                ],
+
+                // Quotes
+                quotes: 'off',
+                '@typescript-eslint/quotes': [
+                    'warn',
+                    'single',
+                    { avoidEscape: true, allowTemplateLiterals: false }
                 ],
 
                 // Promises
