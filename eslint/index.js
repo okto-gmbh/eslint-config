@@ -1,3 +1,7 @@
+const tailwindOptions = {
+    callees: ['twMerge', 'twJoin']
+}
+
 /* eslint-disable sort-keys/sort-keys-fix */
 module.exports = {
     env: {
@@ -171,11 +175,14 @@ module.exports = {
         ],
 
         // Tailwind CSS
-        'tailwindcss/classnames-order': 'warn',
-        'tailwindcss/enforces-negative-arbitrary-values': 'warn',
-        'tailwindcss/enforces-shorthand': 'warn',
-        'tailwindcss/no-contradicting-classname': 'warn',
-        'tailwindcss/no-custom-classname': 'off',
+        'tailwindcss/classnames-order': ['warn', tailwindOptions],
+        'tailwindcss/enforces-negative-arbitrary-values': [
+            'warn',
+            tailwindOptions
+        ],
+        'tailwindcss/enforces-shorthand': ['warn', tailwindOptions],
+        'tailwindcss/no-contradicting-classname': ['warn', tailwindOptions],
+        'tailwindcss/no-custom-classname': ['off', tailwindOptions],
 
         // Vitest
         'vitest/expect-expect': 'warn',
