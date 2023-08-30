@@ -268,7 +268,7 @@ module.exports = {
                 '**/*.d.ts'
             ],
             parserOptions: {
-                createDefaultProgram: true
+                extends: ['plugin:@typescript-eslint/disable-type-checked']
             }
         },
 
