@@ -242,8 +242,8 @@ module.exports = {
                 // Promises
                 '@typescript-eslint/no-floating-promises': 'warn',
 
-                // Optional chaining
-                "@typescript-eslint/no-non-null-asserted-optional-chain": "warn"
+                // No unnecessary condition
+                "@typescript-eslint/no-unnecessary-condition": "warn"
             }
         },
 
