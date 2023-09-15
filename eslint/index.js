@@ -240,7 +240,10 @@ module.exports = {
                 ],
 
                 // Promises
-                '@typescript-eslint/no-floating-promises': 'warn'
+                '@typescript-eslint/no-floating-promises': 'warn',
+
+                // Optional chaining
+                "@typescript-eslint/no-non-null-asserted-optional-chain": "warn"
             }
         },
 
