@@ -267,9 +267,7 @@ module.exports = {
                 '**/*.md/*.ctsx',
                 '**/*.d.ts'
             ],
-            parserOptions: {
-                extends: ['plugin:@typescript-eslint/disable-type-checked']
-            }
+            extends: ['plugin:@typescript-eslint/disable-type-checked']
         },
 
         // settings.js
