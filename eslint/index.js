@@ -226,8 +226,11 @@ module.exports = {
                 'typescript-sort-keys/string-enum': 'warn',
 
                 // Type imports
-                "import/consistent-type-specifier-style": ["warn", "prefer-top-level"],
-                '@typescript-eslint/consistent-type-imports': "warn",
+                'import/consistent-type-specifier-style': [
+                    'warn',
+                    'prefer-top-level'
+                ],
+                '@typescript-eslint/consistent-type-imports': 'warn',
 
                 // Quotes
                 quotes: 'off',
@@ -238,7 +241,16 @@ module.exports = {
                 ],
 
                 // Promises
-                '@typescript-eslint/no-floating-promises': 'warn'
+                '@typescript-eslint/no-floating-promises': 'warn',
+
+                // Optional chaining
+                '@typescript-eslint/no-unnecessary-condition': 'warn',
+                '@typescript-eslint/no-non-null-asserted-optional-chain':
+                    'warn',
+
+                // Type assertions
+                '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+                '@typescript-eslint/non-nullable-type-assertion-style': 'warn'
             }
         },
 
@@ -265,9 +277,7 @@ module.exports = {
                 '**/*.md/*.ctsx',
                 '**/*.d.ts'
             ],
-            parserOptions: {
-                createDefaultProgram: true
-            }
+            extends: ['plugin:@typescript-eslint/disable-type-checked']
         },
 
         // settings.js
