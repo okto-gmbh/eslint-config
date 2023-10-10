@@ -247,6 +247,10 @@ module.exports = {
                 '@typescript-eslint/no-unnecessary-qualifier': 'warn',
                 '@typescript-eslint/no-non-null-asserted-optional-chain':
                     'warn',
+
+                // Type assertions
+                '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+                '@typescript-eslint/non-nullable-type-assertion-style': 'warn'
             }
         },
 
