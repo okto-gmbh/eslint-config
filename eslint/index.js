@@ -226,10 +226,8 @@ module.exports = {
                 'typescript-sort-keys/string-enum': 'warn',
 
                 // Type imports
-                '@typescript-eslint/consistent-type-imports': [
-                    'warn',
-                    { disallowTypeAnnotations: false }
-                ],
+                "import/consistent-type-specifier-style": ["warn", "prefer-top-level"],
+                '@typescript-eslint/consistent-type-imports': "warn",
 
                 // Quotes
                 quotes: 'off',
