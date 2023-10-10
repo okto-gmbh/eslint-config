@@ -244,7 +244,9 @@ module.exports = {
                 '@typescript-eslint/no-floating-promises': 'warn',
 
                 // Optional chaining
-                '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn'
+                '@typescript-eslint/no-unnecessary-qualifier': 'warn',
+                '@typescript-eslint/no-non-null-asserted-optional-chain':
+                    'warn',
             }
         },
 
