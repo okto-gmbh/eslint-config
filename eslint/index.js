@@ -226,8 +226,11 @@ module.exports = {
                 'typescript-sort-keys/string-enum': 'warn',
 
                 // Type imports
-                "import/consistent-type-specifier-style": ["warn", "prefer-top-level"],
-                '@typescript-eslint/consistent-type-imports': "warn",
+                'import/consistent-type-specifier-style': [
+                    'warn',
+                    'prefer-top-level'
+                ],
+                '@typescript-eslint/consistent-type-imports': 'warn',
 
                 // Quotes
                 quotes: 'off',
@@ -238,7 +241,10 @@ module.exports = {
                 ],
 
                 // Promises
-                '@typescript-eslint/no-floating-promises': 'warn'
+                '@typescript-eslint/no-floating-promises': 'warn',
+
+                // Optional chaining
+                '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn'
             }
         },
 
