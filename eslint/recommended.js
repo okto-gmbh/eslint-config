@@ -21,13 +21,8 @@ module.exports = {
         'plugin:jsonc/recommended-with-jsonc',
         'plugin:yml/standard',
         'plugin:markdown/recommended',
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended',
-        'plugin:jsx-a11y/recommended',
         'plugin:sonarjs/recommended',
         'plugin:security/recommended',
-        'plugin:@next/next/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:prettier/recommended'
     ],
@@ -42,22 +37,17 @@ module.exports = {
         'import',
         'simple-import-sort',
         'typescript-sort-keys',
-        'react',
         'sort-keys',
         'sort-destructure-keys',
         'jsonc',
         'markdown',
+        'unicorn',
         'yml',
         'tsdoc',
         'prettier',
         'tailwindcss',
         'vitest'
     ],
-    settings: {
-        react: {
-            version: 'detect'
-        }
-    },
     rules: {
         // Prettier
         'prettier/prettier': ['warn', { usePrettierrc: true }],
@@ -70,6 +60,7 @@ module.exports = {
         ],
         'import/first': 'warn',
         'import/order': 'off',
+        'unicorn/prefer-node-protocol': 'warn',
         'import/no-duplicates': 'error',
         'simple-import-sort/exports': 'warn',
         'sort-imports': 'off',
@@ -136,23 +127,6 @@ module.exports = {
 
         // Functions
         'arrow-body-style': ['warn', 'as-needed'],
-
-        // React
-        'react/react-in-jsx-scope': 'off',
-        'react/prop-types': 'off',
-
-        // Next
-        '@next/next/no-document-import-in-page': 'off',
-
-        // Accessibility
-        'jsx-a11y/anchor-is-valid': [
-            'error',
-            {
-                components: ['Link'],
-                specialLink: ['hrefLeft', 'hrefRight'],
-                aspects: ['invalidHref', 'preferButton']
-            }
-        ],
 
         // Quotes
         quotes: [
@@ -230,7 +204,7 @@ module.exports = {
                     'warn',
                     'prefer-top-level'
                 ],
-                '@typescript-eslint/consistent-type-imports': 'warn',
+                "@typescript-eslint/consistent-type-imports": ["warn", { "disallowTypeAnnotations": false }],
 
                 // Quotes
                 quotes: 'off',

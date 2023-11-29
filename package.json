@@ -1,5 +1,5 @@
 {
-    "version": "0.14.0",
+    "version": "0.15.0-alpha.3",
     "type": "commonjs",
     "name": "@okto-gmbh/eslint-config",
     "description": "ESLint and prettier config",
@@ -13,7 +13,9 @@
         "url": "https://github.com/okto-gmbh/eslint-config/issues"
     },
     "exports": {
-        "./eslint": "./eslint/index.js",
+        "./eslint": "./eslint/all.js",
+        "./eslint/react": "./eslint/react.js",
+        "./eslint/recommended": "./eslint/recommended.js",
         "./prettier": "./prettier/index.js",
         "./stylelint": "./stylelint/index.js",
         "./tsconfig": "./tsconfig/tsconfig.json",
@@ -55,6 +57,7 @@
         "eslint-plugin-unused-imports": "^3.0.0",
         "eslint-plugin-vitest": "^0.3.2",
         "eslint-plugin-yml": "^1.10.0",
+        "eslint-plugin-unicorn": "^48.0.1",
         "postcss-syntax": "^0.36.2",
         "prettier": "^3.0.3",
         "stylelint": "15.10.3",
