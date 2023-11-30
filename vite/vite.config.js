@@ -1,14 +1,11 @@
-const { default: tsconfigPaths } = require('vite-tsconfig-paths')
-const { defineConfig } = require('vitest/config')
+import tsconfigPaths from 'vite-tsconfig-paths'
 
-module.exports = {
-    config: {
-        plugins: [tsconfigPaths()],
-        test: {
-            include: [
-                '**/*.{test,test-d,spec,spec-d}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'
-            ]
-        }
-    },
-    defineConfig
+/** @type {import('vite').UserConfig} */
+export default {
+    plugins: [tsconfigPaths()],
+    test: {
+        include: [
+            '**/*.{test,test-d,spec,spec-d}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'
+        ]
+    }
 }

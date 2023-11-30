@@ -1,46 +1,29 @@
-/* eslint-disable sort-keys/sort-keys-fix */
-module.exports = {
-    env: {
-        browser: true,
-        es6: true,
-        node: true
-    },
-    parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true
-        }
-    },
-    extends: [
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended',
-        'plugin:jsx-a11y/recommended',
-        'plugin:@next/next/recommended'
-    ],
-    plugins: ['react'],
-    settings: {
-        react: {
-            version: 'detect'
-        }
-    },
-    rules: {
-        // React
-        'react/react-in-jsx-scope': 'off',
-        'react/prop-types': 'off',
+/* eslint-disable eslint-plugin-sort-keys/sort-keys-fix */
 
-        // Next
-        '@next/next/no-document-import-in-page': 'off',
+import eslintPluginReact from 'eslint-plugin-react'
 
-        // Accessibility
-        'jsx-a11y/anchor-is-valid': [
-            'error',
-            {
-                components: ['Link'],
-                specialLink: ['hrefLeft', 'hrefRight'],
-                aspects: ['invalidHref', 'preferButton']
+/** @type {import("eslint").Linter.FlatConfig} */
+export const react = [
+    {
+        files: ['**/*.{js,jsx,tsx}'],
+        plugins: {
+            'eslint-plugin-react': eslintPluginReact,
+
+            react: eslintPluginReact
+        },
+
+        settings: {
+            react: {
+                version: 'detect'
             }
-        ]
+        },
+
+        rules: {
+            ...eslintPluginReact.configs.recommended.rules,
+            ...eslintPluginReact.configs['jsx-runtime'].rules,
+
+            'eslint-plugin-react/react-in-jsx-scope': 'off',
+            'eslint-plugin-react/prop-types': 'off'
+        }
     }
-}
+]
