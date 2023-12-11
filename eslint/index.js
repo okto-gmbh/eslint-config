@@ -241,16 +241,7 @@ module.exports = {
                 ],
 
                 // Promises
-                '@typescript-eslint/no-floating-promises': 'warn',
-
-                // Optional chaining
-                '@typescript-eslint/no-unnecessary-condition': 'warn',
-                '@typescript-eslint/no-non-null-asserted-optional-chain':
-                    'warn',
-
-                // Type assertions
-                '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-                '@typescript-eslint/non-nullable-type-assertion-style': 'warn'
+                '@typescript-eslint/no-floating-promises': 'warn'
             }
         },
 
